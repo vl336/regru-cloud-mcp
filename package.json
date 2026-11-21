@@ -1,0 +1,40 @@
+{
+  "name": "regru-cloud-mcp",
+  "version": "0.1.0",
+  "description": "Read-only MCP server for Reg.ru Cloud (CloudVPS API): balance, consumption details, servers and their configs",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "regru-cloud-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "smoke": "node dist/scripts/smoke.js",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "reg.ru",
+    "regru",
+    "cloudvps",
+    "cloud"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  }
+}
