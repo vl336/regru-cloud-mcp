@@ -14,8 +14,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "smoke": "node dist/scripts/smoke.js",
-    "prepublishOnly": "npm run build"
+    "prepare": "npm run build",
+    "smoke": "node dist/scripts/smoke.js"
   },
   "engines": {
     "node": ">=18"
