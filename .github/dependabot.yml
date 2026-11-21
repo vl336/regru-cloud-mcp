@@ -8,6 +8,11 @@ updates:
       minor-and-patch:
         update-types: ["minor", "patch"]
     open-pull-requests-limit: 5
+    ignore:
+      # TypeScript 7 (Go-based tsc) пока несовместим с проектом: не подхватывает
+      # @types/node (см. PR #5). Мажоры typescript поднимаем вручную.
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
